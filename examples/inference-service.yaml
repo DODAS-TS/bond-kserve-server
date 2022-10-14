@@ -1,0 +1,10 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: custom-model
+spec:
+  predictor:
+    containers:
+      - name: kserve-container
+        image: dciangot/custom-model:v1
+        arguments: ['--model_uri="s3:/test/test.json"', '--model_name="my-test-model"']

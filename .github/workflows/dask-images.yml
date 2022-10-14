@@ -5,7 +5,7 @@ on:
     tags:
       - "*"
 jobs:
-  htcondor-wn:
+  bond-kserve-server:
     runs-on: ubuntu-latest
     #env:
     #  DOCKER_TARGET_PLATFORM: linux/arm64
